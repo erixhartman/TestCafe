@@ -8,8 +8,6 @@ export default class Page {
 		this.dealBadge  	 = Selector('.deal-badge');
 		this.priceSort		 = Selector('.btn-sort-link').nth(2);
 		this.applePrices	 = Selector('.reg-price-text');
-		this.applePrices1	 = Selector('.reg-price-text').nth(0);
-		this.applePrices2	 = Selector('.reg-price-text').nth(1);
 		this.filterTitle 	 = Selector('.filter-title-heading');
     }
 }

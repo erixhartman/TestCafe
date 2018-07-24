@@ -26,13 +26,16 @@ test('Sorting Verification', async t => {
         .click(page.priceSort);
 
     
+    var prices = page.applePrices
+    var count    = await prices.count;
 
+    for (var i = 0; i < count; i++) {
+        var price1 = page.applePrices.nth(i).innerText
+        console.log(await price1)
+        var price2 = page.applePrices.nth(i+1).innerText;
+        console.log(await price2);
+        await t
+            .expect(price1).gte(await price2);
+    }
 
-    var price1 = page.applePrices1.innerText
-    console.log(await price1)
-    var price2 = page.applePrices2.innerText;
-    console.log(await price2);
-    await t
-        .expect(price1).gte(await price2);
 });
-
