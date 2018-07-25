@@ -19,6 +19,4 @@ test('Deals Present in Results', async t => {
         .pressKey('enter')
         // Assert that a deal badge is present anywhere on the page
         .expect(page.dealBadge.count).gt(0);
-        // Unable to find where to change Superstore site to French, but the test should work fine either way
-
 });
