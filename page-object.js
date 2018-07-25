@@ -9,5 +9,6 @@ export default class Page {
 		this.priceSort		 = Selector('.btn-sort-link').nth(2);
 		this.applePrices	 = Selector('.reg-price-text');
 		this.filterTitle 	 = Selector('.filter-title-heading');
+		this.languageButton	 = Selector('.header-bar>ul>li>a').nth(2);
     }
 }

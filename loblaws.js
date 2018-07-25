@@ -2,7 +2,7 @@ import Page from './page-object';
 import { Selector } from 'testcafe';
 
 fixture `Loblaws`
-    .page `https://www.loblaws.ca/search/?search-bar=apples`;
+    .page `https://www.loblaws.ca/`;
 
 const page       = new Page();
 
@@ -17,11 +17,13 @@ for (var i = 0; i < prices.length; i++) {
 test('Sorting Verification', async t => {
     await t
         // Resize window to fit widest breakpoint (mobile break at 650 and wide break at 960 px)
-        // .resizeWindow(1269, 700)
+        .resizeWindow(1269, 700)
+        // Uncomment line below to Click Language Button to trigger french
+        .click(page.languageButton)
         // Click on search input apples and complete search
-        // .click(page.searchBar)
-        // .typeText(page.searchBar, 'apples')
-        // .pressKey('enter')
+        .click(page.searchBar)
+        .typeText(page.searchBar, 'apples')
+        .pressKey('enter')
         // Click on the sort High-to-low button
         .click(page.priceSort);
 
