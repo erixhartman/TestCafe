@@ -17,6 +17,6 @@ test('Deals Present in Results', async t => {
         // Input search for oranges and complete search
         .typeText(page.searchBar, 'oranges')
         .pressKey('enter')
-        // Assert that a deal badge is present anywhere on the page
+        // Assert that at least one deal badge is present anywhere on the page
         .expect(page.dealBadge.count).gt(0);
 });

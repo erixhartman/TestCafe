@@ -15,4 +15,6 @@ Solution found in 'superstore.js'. Test can be run using command:
 testcafe chrome superstore.js
 ```
 
-If you have any questions feel free to reach out to me at <eah458@nyu.edu>
+Both tests are run within the parameters of the mobile breakpoint.
+
+If you have any questions feel free to reach out to me at <eah458@nyu.edu>.

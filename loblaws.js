@@ -15,9 +15,8 @@ test('Sorting Verification', async t => {
         .typeText(page.searchBar, 'apples')
         .pressKey('enter')
         // Click on the sort High-to-low button
-        .click(page.priceSort);
-
-    
+        .click(page.priceSort); 
+          
     // Set variables to get the number of items listed
     var prices = page.applePrices
     var count    = await prices.count;
