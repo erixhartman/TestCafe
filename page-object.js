@@ -8,5 +8,6 @@ export default class Page {
 		this.applePrices	 = Selector('.reg-price-text');
         this.provinceButton  = Selector('.select-province');
 		this.dealBadge  	 = Selector('.deal-badge');
+		this.showMore		 = Selector('.btn-show-more')
     }
 }
