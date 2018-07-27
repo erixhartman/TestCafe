@@ -21,18 +21,19 @@ test('Sorting Verification', async t => {
     var prices = page.applePrices
     var count    = await prices.count;
 
-    // Loop all items and compare each one (price1) to the item following it (price2) ensuring that price1 is > or == to price2
+    // Loop all items and compare each one (price1) to the item following it (price2) ensuring that price1 is >= to price2
     for (var i = 0; i < (count-1); i++) {
         // Isolate each individual price then retrieve just the inner text, 
-        // remove the $ sign and convert it to a number so that it can be compared properly
+        // Parse the inner text to remove '$', any blank spaces, and change commas to decimals to allow the test to
+        // run while the page is in French. Once this is done convert it to a number so that it can be compared properly
         var price1 = page.applePrices.nth(i)
         var price1 = await price1.innerText
-        var price1 = price1.substring(1)
+        var price1 = parseFloat(price1.replace(/\s/g, "").replace(",", ".").replace("$",""));
         var price1 = Number(price1)
         
         var price2 = page.applePrices.nth(i+1)
         var price2 = await price2.innerText
-        var price2 = price2.substring(1)
+        var price2 = parseFloat(price2.replace(/\s/g, "").replace(",", ".").replace("$",""));
         var price2 = Number(price2)
     await t
        .expect(price1).gte(await price2);
