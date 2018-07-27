@@ -15,6 +15,6 @@ Solution found in 'superstore.js'. Test can be run using command:
 testcafe chrome superstore.js
 ```
 
-Both tests are run within the parameters of the mobile breakpoint.
+Both tests are run within the parameters of the mobile breakpoint and will work even if the site is in French.
 
 If you have any questions feel free to reach out to me at <eah458@nyu.edu>.
