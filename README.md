@@ -1,4 +1,4 @@
-Loblaw Digital Assignment 7/18
+Test Cafe Tutorial
 ==========
 
 # Test Scenario 1
